@@ -46,7 +46,6 @@ public class Main {
 
         prikaziSveLetove();
 
-        
         boolean t = true;
         while (t) {
             t = registracijaPutnika();
@@ -84,7 +83,7 @@ public class Main {
             Collections.sort(filtriranaLista, Let.poredjenjePoDistanci);
         }
 
-        if (filtriranaLista.size() != 0) {
+        if (filtriranaLista.size() > 0) {
             System.out.println("LETOVI:");
             for (Let let : filtriranaLista) {
                 System.out.println(let);
@@ -175,7 +174,7 @@ public class Main {
                 System.out.println("Sortiranje po:\n a)najjeftiniji let \n b)najkraci let? (a ili b)");
                 String param = in.nextLine();
                 if (!param.equals("a") && !param.equals("b")) {
-                    System.out.println("Unesite a ili b");
+                    System.out.println("Morate uneti a ili b. Probajte ponovo.");
                     return true;
                 }
 
